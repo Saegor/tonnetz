@@ -178,7 +178,7 @@ class TonnetzDisplay:
     def __init__(self):
         self.tonnetz_grid, self.x_boundaries, self.y_boundaries = build_tonnetz_grid()
         # Tu peux choisir get_rainbow_colormap() ou get_piano_colormap()
-        self.colormap = get_piano_colormap()
+        self.colormap = get_rainbow_colormap()
         self._notes_lock = threading.Lock()  # Verrou pour la gestion thread-safe de detected_notes.
         self.detected_notes = []  # Liste des tuples (note_midi, amplitude)
         self.running = True     # Attribut pour gérer proprement l'arrêt de la boucle d'affichage
